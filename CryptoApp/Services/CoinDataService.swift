@@ -93,7 +93,6 @@ class CoinDataLoader{
             }
             throw error
         }
-        return coins
     }
     
 }

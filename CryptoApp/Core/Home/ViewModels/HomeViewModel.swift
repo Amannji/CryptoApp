@@ -12,16 +12,8 @@ class HomeViewModel: ObservableObject{
     @Published var portfolioCoins: [CoinModel] = []
     
     private let dataService = CoinDataLoader()
-    private var cancellables = Set<AnyCancellable>()
-//    init(){
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0){
-//            self.allCoins.append(DeveloperPreview.instance.coin)
-//            self.portfolioCoins.append(DeveloperPreview.instance.coin)
-//        }
-//        addSubscribers()
-//    }
     
-    func addSubscribers() async{
+    func addSubscribers() async {
         do{
             self.allCoins = try await dataService.getCoins()
         }
