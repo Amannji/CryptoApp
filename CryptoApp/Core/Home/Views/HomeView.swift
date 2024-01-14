@@ -9,7 +9,8 @@ import SwiftUI
 
 struct HomeView: View {
     
-    @EnvironmentObject private var vm: HomeViewModel
+//    @EnvironmentObject private var vm: HomeViewModel
+    @StateObject var vm = HomeViewModel()
     @State private var showPortfolio: Bool = false
     
     var body: some View {
@@ -21,7 +22,6 @@ struct HomeView: View {
             //content layer
             VStack{
                 homeHeader
-                
                 columnTitles
                 
                 if !showPortfolio{
@@ -33,23 +33,32 @@ struct HomeView: View {
                         .transition(.move(edge: .trailing))
                 }
                 
+                
                 Spacer(minLength: 0)
             }
             
             
         }
+        .onAppear{
+            Task{
+                await vm.addSubscribers()
+            }
+        }
     }
 }
 
 
-struct HomeView_Previews: PreviewProvider{
-    static var previews: some View{
-        NavigationView{
-            HomeView()
-                .navigationBarHidden(true)
-        }
-        .environmentObject(dev.homeVM)
-    }
+//struct HomeView_Previews: PreviewProvider{
+//    static var previews: some View{
+//        NavigationView{
+//            HomeView()
+//                .navigationBarHidden(true)
+//        }
+//        .environmentObject(dev.homeVM)
+//    }
+//}
+#Preview {
+    HomeView()
 }
 
 extension HomeView{
