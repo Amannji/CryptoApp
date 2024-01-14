@@ -50,6 +50,7 @@ import SwiftUI
 class CoinImageViewDataLoader{
     
     var urlString: String
+    private let folderName="coin_images"
     
     func getData() async throws->UIImage{
         do{
@@ -71,16 +72,34 @@ class CoinImageViewModel: ObservableObject{
     @Published var image: UIImage?
     @Published var isLoading: Bool = false
     
+    
     var manager: CoinImageViewDataLoader
+    private let fileManager = LocalFileManager.instance
+    private let folderName = "coin_images"
     var coin: CoinModel
     
     init(coin: CoinModel){
         self.coin = coin
         self.manager = CoinImageViewDataLoader(urlString: self.coin.image)
+        
     }
     
-    func getImage() async{
+    func getImageFromLocal() async{
+        if let savedImage = fileManager.getImage(imageName: coin.id, folderName: folderName){
+            self.image = savedImage
+            print("Retreived image from File Management")
+        } else{
+            await downloadImage()
+            print("Downloading Image")
+        }
+            
+            
+    }
+    
+    func downloadImage() async{
         self.image = try? await manager.getData()
+        guard let downloadedImage = self.image else{return}
+        self.fileManager.saveImage(image: downloadedImage, imageName: coin.id, folderName: folderName)
     }
 }
 
@@ -114,7 +133,7 @@ struct CoinImageView: View {
         }
         .onAppear{
             Task{
-                await vm.getImage()
+                await vm.getImageFromLocal()
             }
         }
     }
