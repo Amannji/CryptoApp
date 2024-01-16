@@ -16,7 +16,20 @@ class HomeViewModel: ObservableObject{
     
     func addSubscribers() async {
         do{
-            self.allCoins = try await dataService.getCoins()
+            let coins = try await dataService.getCoins()
+            guard !searchText.isEmpty else{
+                self.allCoins = coins
+                return
+            }
+            let loweredText = searchText.lowercased()
+            self.allCoins = coins.filter{(coin)-> Bool in
+                return coin.name.lowercased().contains(loweredText) ||
+                coin.symbol.lowercased().contains(loweredText) ||
+                coin.id.lowercased().contains(loweredText)
+                
+            }
+    
+            
         }
         catch{
             print(error,error.localizedDescription)
