@@ -12,27 +12,47 @@ class HomeViewModel: ObservableObject{
     @Published var portfolioCoins: [CoinModel] = []
     @Published var searchText: String = ""
     
-    private let dataService = CoinDataLoader()
+    @Published var cancellables = Set<AnyCancellable>()
     
-    func addSubscribers() async {
-        do{
-            let coins = try await dataService.getCoins()
-            guard !searchText.isEmpty else{
-                self.allCoins = coins
-                return
-            }
-            let loweredText = searchText.lowercased()
-            self.allCoins = coins.filter{(coin)-> Bool in
-                return coin.name.lowercased().contains(loweredText) ||
-                coin.symbol.lowercased().contains(loweredText) ||
-                coin.id.lowercased().contains(loweredText)
+    private let dataService = CoinDataService()
+    
+    init(){
+        addSubscribers()
+    }
+    
+    func addSubscribers(){
+//        dataService.$allCoins
+//            .sink{[weak self] (returnedCoins) in
+//                self?.allCoins = returnedCoins
+//                
+//            }
+//            .store(in: &cancellables)
+        
+        $searchText
+            .debounce(for: .seconds(0.5), scheduler: DispatchQueue.main)
+            .combineLatest(dataService.$allCoins)
+            .map(filterCoins)
+            
+            .sink{[weak self] (returnedCoins) in
+                self?.allCoins = returnedCoins
                 
             }
+            .store(in: &cancellables)
     
             
+    }
+    
+    func filterCoins(text: String, coins: [CoinModel]) -> [CoinModel]{
+        guard !text.isEmpty else {
+            return coins
         }
-        catch{
-            print(error,error.localizedDescription)
+        let lowercasedText = text.lowercased()
+        return coins.filter{ (coin) -> Bool in
+            return coin.name.lowercased().contains(lowercasedText) ||
+            coin.symbol.lowercased().contains(lowercasedText) ||
+            coin.id.lowercased().contains(lowercasedText)
         }
     }
+    
+
 }

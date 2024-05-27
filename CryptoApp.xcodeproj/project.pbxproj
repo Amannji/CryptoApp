@@ -30,6 +30,9 @@
 		676479232B4545A9009EE483 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676479222B4545A9009EE483 /* HomeViewModel.swift */; };
 		676479252B454FDC009EE483 /* CircleButtonAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676479242B454FDC009EE483 /* CircleButtonAnimationView.swift */; };
 		676479282B4576B4009EE483 /* CoinDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676479272B4576B4009EE483 /* CoinDataService.swift */; };
+		67C6047C2C04633D0055DF34 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C6047B2C04633D0055DF34 /* UIApplication.swift */; };
+		67C6047E2C0477A40055DF34 /* MarketDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C6047D2C0477A40055DF34 /* MarketDataService.swift */; };
+		67C604802C047A1F0055DF34 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C6047F2C047A1F0055DF34 /* NetworkManager.swift */; };
 		67F408262B540B3D009B44BE /* LocalFIleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F408252B540B3D009B44BE /* LocalFIleManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +80,9 @@
 		676479222B4545A9009EE483 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		676479242B454FDC009EE483 /* CircleButtonAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonAnimationView.swift; sourceTree = "<group>"; };
 		676479272B4576B4009EE483 /* CoinDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDataService.swift; sourceTree = "<group>"; };
+		67C6047B2C04633D0055DF34 /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
+		67C6047D2C0477A40055DF34 /* MarketDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketDataService.swift; sourceTree = "<group>"; };
+		67C6047F2C047A1F0055DF34 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		67F408252B540B3D009B44BE /* LocalFIleManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFIleManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -172,6 +178,7 @@
 				67042E612B43F36400F92C12 /* Color.swift */,
 				6764791E2B44F335009EE483 /* PreviewProvider.swift */,
 				676479202B44FBB1009EE483 /* Double.swift */,
+				67C6047B2C04633D0055DF34 /* UIApplication.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -254,6 +261,7 @@
 			isa = PBXGroup;
 			children = (
 				676479272B4576B4009EE483 /* CoinDataService.swift */,
+				67C6047D2C0477A40055DF34 /* MarketDataService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -262,6 +270,7 @@
 			isa = PBXGroup;
 			children = (
 				67F408252B540B3D009B44BE /* LocalFIleManager.swift */,
+				67C6047F2C047A1F0055DF34 /* NetworkManager.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -400,10 +409,13 @@
 				676479282B4576B4009EE483 /* CoinDataService.swift in Sources */,
 				67042E392B43F10600F92C12 /* ContentView.swift in Sources */,
 				676479252B454FDC009EE483 /* CircleButtonAnimationView.swift in Sources */,
+				67C604802C047A1F0055DF34 /* NetworkManager.swift in Sources */,
 				67042E682B43F6B500F92C12 /* HomeView.swift in Sources */,
+				67C6047E2C0477A40055DF34 /* MarketDataService.swift in Sources */,
 				67042E372B43F10600F92C12 /* CryptoAppApp.swift in Sources */,
 				676479232B4545A9009EE483 /* HomeViewModel.swift in Sources */,
 				671E5FAD2B56FD7500974563 /* StatisticalView.swift in Sources */,
+				67C6047C2C04633D0055DF34 /* UIApplication.swift in Sources */,
 				671E5FAB2B56FCAD00974563 /* StatisticalModel.swift in Sources */,
 				67042E6C2B43F76400F92C12 /* CircleButtonView.swift in Sources */,
 				67042E6F2B44811400F92C12 /* CoinModel.swift in Sources */,
