@@ -262,7 +262,7 @@ struct CoinModel: Identifiable, Codable{
 //        case lastUpdated = "last_updated"
 //        case sparklineIn7D = "sparkline_in_7d"
 //        case currentHoldings
-//        
+//
 //    }
     
     

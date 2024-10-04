@@ -11,13 +11,18 @@ struct HomeView: View {
     
 //    @EnvironmentObject private var vm: HomeViewModel
     @StateObject var vm = HomeViewModel()
-    @State private var showPortfolio: Bool = true
+    @State private var showPortfolio: Bool = false
+    @State private var showPortfolioView: Bool = false
     
     var body: some View {
         ZStack{
             //backgroundColor
             Color.theme.background
                 .ignoresSafeArea()
+                .sheet(isPresented: $showPortfolioView, content: {
+                    PortfolioView()
+                        .environmentObject(vm)
+                })
             
             //content layer
             VStack{
@@ -35,39 +40,36 @@ struct HomeView: View {
                         .transition(.move(edge: .trailing))
                 }
                 
-                
                 Spacer(minLength: 0)
             }
             
-            
         }
-        .onAppear{
-            Task{
-                await vm.addSubscribers()
-            }
-        }
+        
     }
 }
 
 
-//struct HomeView_Previews: PreviewProvider{
-//    static var previews: some View{
-//        NavigationView{
-//            HomeView()
-//                .navigationBarHidden(true)
-//        }
-//        .environmentObject(dev.homeVM)
-//    }
-//}
-#Preview {
-    HomeView()
+struct HomeView_Previews: PreviewProvider{
+    static var previews: some View{
+        NavigationView{
+            HomeView()
+                .navigationBarHidden(true)
+        }
+        .environmentObject(dev.homeVM)
+    }
 }
+
 
 extension HomeView{
     private var homeHeader: some View{
         HStack{
             CircleButtonView(iconName: showPortfolio ? "plus" :"info")
                 .animation(.none, value: showPortfolio)
+                .onTapGesture {
+                    if showPortfolio{
+                        showPortfolioView.toggle()
+                    }
+                }
                 .background(
                     CircleButtonAnimationView(animate: $showPortfolio)
                 )

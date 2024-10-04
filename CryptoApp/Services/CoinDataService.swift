@@ -37,7 +37,6 @@ class CoinDataService{
     }
 }
 
-
 //class CoinDataLoader{
 //    @Published var coins:[CoinModel] = []
 //    

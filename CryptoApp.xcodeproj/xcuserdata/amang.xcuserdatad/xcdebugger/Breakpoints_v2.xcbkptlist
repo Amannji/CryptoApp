@@ -14,42 +14,10 @@
             filePath = "CryptoApp/Services/CoinDataService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "56"
-            endingLineNumber = "56"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
             landmarkName = "unknown"
             landmarkType = "0">
-            <Locations>
-               <Location
-                  uuid = "E1338E84-F7AA-43CA-9080-3499DE3E7725 - 3b98b817b36c7dd1"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for CryptoApp.CoinDataLoader.getCoins() async throws -&gt; Swift.Array&lt;CryptoApp.CoinModel&gt;"
-                  moduleName = "CryptoApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/amang/Documents/Learning/SwiftUI/CryptoApp/CryptoApp/Services/CoinDataService.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "78"
-                  endingLineNumber = "78"
-                  offsetFromSymbolStart = "844">
-               </Location>
-               <Location
-                  uuid = "E1338E84-F7AA-43CA-9080-3499DE3E7725 - 3b98b817b36c7dd1"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for CryptoApp.CoinDataLoader.getCoins() async throws -&gt; Swift.Array&lt;CryptoApp.CoinModel&gt;"
-                  moduleName = "CryptoApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/amang/Documents/Learning/SwiftUI/CryptoApp/CryptoApp/Services/CoinDataService.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "78"
-                  endingLineNumber = "78"
-                  offsetFromSymbolStart = "816">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -62,8 +30,8 @@
             filePath = "CryptoApp/Services/CoinDataService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "70"
-            endingLineNumber = "70"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
             landmarkName = "unknown"
             landmarkType = "0">
          </BreakpointContent>
@@ -78,8 +46,8 @@
             filePath = "CryptoApp/Services/CoinDataService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "72"
-            endingLineNumber = "72"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
             landmarkName = "unknown"
             landmarkType = "0">
          </BreakpointContent>
@@ -94,42 +62,10 @@
             filePath = "CryptoApp/Services/CoinDataService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
             landmarkName = "unknown"
             landmarkType = "0">
-            <Locations>
-               <Location
-                  uuid = "344D5AF0-605E-4B49-8A9B-36D1FE827CC3 - 3b98b817b36c7d93"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for CryptoApp.CoinDataLoader.getCoins() async throws -&gt; Swift.Array&lt;CryptoApp.CoinModel&gt;"
-                  moduleName = "CryptoApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/amang/Documents/Learning/SwiftUI/CryptoApp/CryptoApp/Services/CoinDataService.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "80"
-                  endingLineNumber = "80"
-                  offsetFromSymbolStart = "1212">
-               </Location>
-               <Location
-                  uuid = "344D5AF0-605E-4B49-8A9B-36D1FE827CC3 - 3b98b817b36c7d93"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for CryptoApp.CoinDataLoader.getCoins() async throws -&gt; Swift.Array&lt;CryptoApp.CoinModel&gt;"
-                  moduleName = "CryptoApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/amang/Documents/Learning/SwiftUI/CryptoApp/CryptoApp/Services/CoinDataService.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "80"
-                  endingLineNumber = "80"
-                  offsetFromSymbolStart = "1396">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -142,8 +78,8 @@
             filePath = "CryptoApp/Services/CoinDataService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
             landmarkName = "unknown"
             landmarkType = "0">
          </BreakpointContent>
@@ -158,8 +94,8 @@
             filePath = "CryptoApp/Services/CoinDataService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "62"
-            endingLineNumber = "62"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
             landmarkName = "unknown"
             landmarkType = "0">
          </BreakpointContent>
@@ -174,8 +110,8 @@
             filePath = "CryptoApp/Services/CoinDataService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
             landmarkName = "unknown"
             landmarkType = "0">
          </BreakpointContent>
